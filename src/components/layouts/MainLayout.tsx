@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import MainHeader from "./MainHeader";
 import { AppBar } from "./AppBar";
 import navItems from "./navigation/navLinks";
+import { MainFooter } from "./MainFooter";
 interface MainLayoutProps {
   maxWidth: Breakpoint;
   pb: boolean;
@@ -26,6 +27,7 @@ export const MainLayout = (props: MainLayoutProps) => {
       >
         <Outlet />
       </Container>
+      <MainFooter />
     </Box>
   );
 };

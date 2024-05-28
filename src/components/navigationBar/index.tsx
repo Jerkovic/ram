@@ -40,7 +40,7 @@ const NavigationBar = (props: NavigationBarProps) => {
       width="100%"
       direction="row"
       component="nav"
-      borderLeft={1}
+      borderLeft={0}
       borderColor="border"
       flexWrap="wrap"
     >

@@ -19,12 +19,12 @@ export const NavItem = (props: NavItemProps) => {
       width="100%"
       direction="row"
       p={1.5}
-      border={1}
+      border={0}
       borderLeft={0}
       borderColor="border"
-      alignItems="center"
-      alignContent="center"
-      justifyContent="center"
+      alignItems="left"
+      alignContent="left"
+      justifyContent="left"
       spacing={0.5}
       title={props.title}
     >

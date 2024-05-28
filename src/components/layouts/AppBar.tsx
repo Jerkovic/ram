@@ -16,7 +16,7 @@ export const AppBar = (props: AppBarProps) => {
       elevation={0}
       sx={{ borderLeft: 0, borderRight: 0 }}
     >
-      <Box bgcolor="background.secondary" py={2}>
+      <Box py={0}>
         <Container maxWidth="lg">
           <NavigationBar navigationItems={props.navItems} />
         </Container>
