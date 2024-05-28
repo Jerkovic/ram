@@ -134,7 +134,7 @@ export const NavMenu = (props: NavMenuProps) => {
 
 export const NavCollapse = (props: NavCollapseProps) => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const { title, menuChildren, Icon, level = 1 } = props;
+  const { title, menuChildren, level = 1 } = props;
   const handlePopoverClose = () => {
     setAnchorEl(null);
   };
