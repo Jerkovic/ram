@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
 
-import logo from "../../assets/img.png";
+import logo from "../../assets/img_1.png";
 
 function MainHeader() {
   return (
