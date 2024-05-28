@@ -97,6 +97,39 @@ const NAV_LINKS: NavigationItem[] = [
       },
     ],
   },
+  {
+    id: "admin-menu",
+    type: "group",
+    title: "Settings",
+    Icon: GridViewOutlinedIcon,
+    menuChildren: [
+      {
+        title: "Tables",
+        href: "/tables",
+      },
+      {
+        title: "Loaders",
+        href: "/components/loaders",
+      },
+      {
+        title: "Restaurants",
+        href: "/restaurants",
+      },
+      {
+        title: "Merry go round",
+        href: "/components/carousel",
+      },
+      {
+        title: "Navigation",
+        href: "/components/navigation",
+      },
+    ],
+  },
+  {
+    title: "Navigation",
+    href: "/navigation",
+    Icon: BarChartOutlinedIcon,
+  },
 ];
 
 export default NAV_LINKS;
