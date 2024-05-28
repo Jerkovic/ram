@@ -6,7 +6,7 @@ import { NavigationItem } from "./navigation/navLinks";
 import NavigationBar from "../navigationBar";
 
 interface AppBarProps {
-  navItems: NavigationItem[]; // some other type
+  navItems: NavigationItem[];
 }
 
 export const AppBar = (props: AppBarProps) => {

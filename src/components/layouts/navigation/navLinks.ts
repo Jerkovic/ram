@@ -1,12 +1,14 @@
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import * as React from "react";
+import { SvgIconProps } from "@mui/material";
 
 export interface NavigationItem {
   id?: string;
   type?: "group" | "item";
   href?: string;
   title: string;
-  Icon?: unknown;
+  Icon?: React.ElementType<SvgIconProps>;
   menuMinWidth?: number;
   menuChildren?: NavigationItem[];
 }
