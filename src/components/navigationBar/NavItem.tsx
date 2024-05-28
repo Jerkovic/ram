@@ -2,7 +2,7 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { ButtonBase, SvgIconProps, SxProps, Theme } from "@mui/material";
+import { alpha, ButtonBase, SvgIconProps, SxProps, Theme } from "@mui/material";
 import { Link as RouterLink, useMatch } from "react-router-dom";
 import { ReactNode } from "react";
 
@@ -13,7 +13,7 @@ interface NavItemProps {
   selected: boolean;
 }
 
-const NavItem = (props: NavItemProps) => {
+export const NavItem = (props: NavItemProps) => {
   return (
     <Stack
       width="100%"
@@ -31,6 +31,7 @@ const NavItem = (props: NavItemProps) => {
       {props.Icon && (
         <props.Icon
           sx={{
+            color: "white",
             fontSize: 18,
           }}
         />
@@ -52,7 +53,7 @@ const NavItem = (props: NavItemProps) => {
         <ExpandMoreIcon
           fontSize="small"
           sx={{
-            color: props.selected ? "primary.contrastText" : "text.secondary",
+            color: props.selected ? "primary.contrastText" : "text.white",
             fontSize: 17,
           }}
         />
@@ -65,18 +66,20 @@ interface NavItemButtonProps {
   children: ReactNode;
   selected: boolean;
   sx?: SxProps<Theme>;
-  component: React.ElementType;
-  to: string;
+  [key: string]: unknown;
 }
 
 export function NavItemButton(props: NavItemButtonProps) {
+  const { ...rest } = props;
   return (
     <ButtonBase
       sx={{
         flexGrow: 1,
+        "&:hover": {
+          backgroundColor: (theme) => alpha(theme.palette.primary.light, 0.5),
+        },
       }}
-      component={props.component}
-      to={props.to}
+      {...rest}
     >
       {props.children}
     </ButtonBase>
@@ -87,9 +90,10 @@ interface NavLinkProps {
   href: string;
   Icon?: React.ElementType<SvgIconProps>;
   title: string;
+  showExpand: boolean;
 }
-export function NavLink(props: NavLinkProps) {
-  const { href, Icon, title } = props;
+function NavLink(props: NavLinkProps) {
+  const { href, Icon, title, showExpand } = props;
   const match = useMatch({
     path: href,
   });
@@ -100,7 +104,7 @@ export function NavLink(props: NavLinkProps) {
         Icon={Icon}
         title={title}
         selected={match !== null}
-        showExpand={false}
+        showExpand={showExpand}
       />
     </NavItemButton>
   );

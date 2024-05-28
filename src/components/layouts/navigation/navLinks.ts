@@ -9,7 +9,7 @@ export interface NavigationItem {
   href?: string;
   title: string;
   Icon?: React.ElementType<SvgIconProps>;
-  menuMinWidth?: number;
+  menuMinWidth?: string;
   menuChildren?: NavigationItem[];
 }
 
@@ -39,6 +39,7 @@ const NAV_LINKS: NavigationItem[] = [
       {
         title: "Dashboard05",
         href: "/dashboards/dashboard5",
+        Icon: BarChartOutlinedIcon,
       },
     ],
   },
