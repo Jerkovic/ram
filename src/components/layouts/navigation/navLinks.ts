@@ -1,5 +1,6 @@
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import * as React from "react";
 import { SvgIconProps } from "@mui/material";
 
@@ -14,6 +15,11 @@ export interface NavigationItem {
 }
 
 const NAV_LINKS: NavigationItem[] = [
+  {
+    title: "Home",
+    href: "/",
+    Icon: HomeOutlinedIcon,
+  },
   {
     id: "dashboard-menu",
     type: "group",

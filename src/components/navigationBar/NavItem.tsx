@@ -22,8 +22,8 @@ export const NavItem = (props: NavItemProps) => {
       border={0}
       borderLeft={0}
       borderColor="border"
-      alignItems="left"
-      alignContent="left"
+      alignItems="center"
+      alignContent="center"
       justifyContent="left"
       spacing={0.5}
       title={props.title}
@@ -103,7 +103,7 @@ function NavLink(props: NavLinkProps) {
       <NavItem
         Icon={Icon}
         title={title}
-        selected={match !== null}
+        selected={Boolean(match)}
         showExpand={showExpand}
       />
     </NavItemButton>
