@@ -1,11 +1,27 @@
 import { createTheme } from "@mui/material/styles";
+import { blue, red, grey } from "@mui/material/colors";
 
 export const defaultTheme = createTheme({
   palette: {
-    background: {},
+    primary: {
+      main: blue[600],
+    },
+    secondary: {
+      main: grey[500],
+    },
+    error: {
+      main: red[600],
+    },
+    background: {
+      default: "#f0f2f5",
+    },
+    text: {
+      primary: "#000000d9",
+      secondary: "#00000073",
+    },
   },
   typography: {
-    fontFamily: "Arial",
+    fontFamily: `Roboto, "Helvetica" , "-apple-system" , "Arial", sans-serif`,
     button: {
       textTransform: "none",
     },
