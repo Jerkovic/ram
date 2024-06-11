@@ -27,13 +27,14 @@ export const defaultTheme = createTheme({
     },
   },
   shape: {
-    borderRadius: 0,
+    borderRadius: 4,
   },
   components: {
     MuiCssBaseline: {},
     MuiDialogTitle: {
       styleOverrides: {
         root: {
+          fontSize: "1rem",
           backgroundColor: "#efefef",
         },
       },
